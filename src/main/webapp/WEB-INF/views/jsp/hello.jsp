@@ -28,7 +28,7 @@
 		</c:if>
 
 		<c:if test="${empty name}">
-			Welcome Citi GCG EPS AEM - FrontEnd DevOps - Rishi Testing
+			Welcome Citi GCG EPS AEM - FrontEnd DevOps - Kumar Testing
 		</c:if>
     </p>
     <p>
