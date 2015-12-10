@@ -1,0 +1,7 @@
+---
+# all applications use these settings and services
+memory: 1G
+instances: 1
+applications:
+- name: spring3-mvc
+  path: /root/.jenkins/workspace/Spring3-MVC/target/spring3-mvc-maven-xml-hello-world-1.0.0.${BUILD_NUMBER}.war

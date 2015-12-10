@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<project name="CICDSVN" default="deploy" basedir=".">
+
+	<property file="build.properties"/>
+	<target name="deploy">
+				<exec executable="${wsadmin.path}/wsadmin.bat" dir="${wsadmin.path}/">
+					<arg value="-f"/>
+					<arg value="${project.path}/updateapp.py"/>
+					<arg value="-lang"/>
+					<arg value="jython"/>
+					<arg value="-conntype"/>
+					<arg value="SOAP"/>
+					<arg value="-host"/>
+					<arg value="${host}"/>
+					<arg value="-port"/>
+					<arg value="${port}"/>
+					<arg value="-user"/>
+					<arg value="${user.id}"/>
+					<arg value="-password"/>
+					<arg value="${user.pwd}"/>
+					<arg value="${lob}"/>
+					<arg value="${env}"/>
+					<arg value="${ear.path}/spring3-mvc-maven-xml-hello-world-1.0.0.SNAPSHOT.war"/>
+					<arg value="${project.path}"/>
+				</exec>
+	</target>
+
+	<target name="test">
+		<echo message="This is test target..."/>
+	 </target>
+
+</project>
